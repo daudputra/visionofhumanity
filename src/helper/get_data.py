@@ -37,30 +37,10 @@ class GetData:
             except Exception as e:
                 raise PageRequestError(f"An unexpected error occurred: {e}")
 
-            
-                
-            
-
             finally:
                 await browser.close()
 
             return csv_urls
-
-            # try:
-
-            #     page.on("request", handle_request)
-            #     await page.goto(url)
-            #     await page.wait_for_timeout(6000)
-
-            # except TimeoutError:
-            #     await page.reload()
-            #     page.on("request", handle_request)
-            #     await page.wait_for_timeout(60000)
-            # except Exception as e:
-            #     raise PageRequestError(f"Error: {e}")
-
-            # await browser.close()
-            # return csv_urls
 
     @staticmethod   
     async def save_csv(url):
@@ -99,10 +79,6 @@ class GetData:
 
         filename = url.split('/')[-1]
         file_path = os.path.join(csv_dir, filename)
-
-        # response = requests.get(url)
-        # with open(file_path, 'wb') as file:
-        #     file.write(response.content)
 
         loop = asyncio.get_event_loop()
         await loop.run_in_executor(None, GetData.download_csv, url, file_path)

@@ -79,13 +79,6 @@ class Mapping:
 
         return data_dict
                 
-        # row = ['N/A' if value == '-1' else value for value in row]
-        
-        # overall_score = row[4]
-        # if overall_score == 'N/A':
-        #     overall_score = 'N/A'
-        # else:
-        #     overall_score = round(float(overall_score), 2)
 
 
     
@@ -93,16 +86,6 @@ class Mapping:
     async def gti_dict_data(row):
         row = Mapping.na_row(row)
         overall_score = await Mapping.get_overall_score(row, 4)
-
-        # row = ['N/A' if value == '-1' else value for value in row]
-        
-        # overall_score = row[4]
-        # if overall_score == 'N/A':
-        #     overall_score = 'N/A'
-        # else:
-        #     overall_score = round(float(overall_score), 2)
-
-
 
         data_dict = {
             "code": Mapping.convert_value(row[0]),
@@ -124,17 +107,6 @@ class Mapping:
         row = Mapping.na_row(row)
         overall_score = await Mapping.get_overall_score(row, 4)
 
-        # row = ['N/A' if value == '-1' else value for value in row]
-
-        
-        # overall_score = row[4]
-        # if overall_score == 'N/A':
-        #     overall_score = 'N/A'
-        # else:
-        #     overall_score = round(float(overall_score), 2)
-
-
-
         data_dict = {
             "code": Mapping.convert_value(row[0]),
             "name": Mapping.convert_value(row[1]),
@@ -153,20 +125,9 @@ class Mapping:
     @staticmethod
     async def mpi_dict_data(row):
 
-        
-
-        # row = ['N/A' if value == '-1' else value for value in row]
         row = Mapping.na_row(row)
         overall_score = await Mapping.get_overall_score(row, 3)
         
-        # overall_score = row[3]
-        # if overall_score == 'N/A':
-        #     overall_score = 'N/A'
-        # else:
-        #     overall_score = round(float(overall_score), 2)
-
-
-
         data_dict = {
             "code": Mapping.convert_value(row[1]),
             "name": Mapping.convert_value(row[0]),
@@ -188,15 +149,6 @@ class Mapping:
 
         row = Mapping.na_row(row)
         overall_score = await Mapping.get_overall_score(row, 4)
-        # row = ['N/A' if value == '-1' else value for value in row]
-        
-        # overall_score = row[4]
-        # if overall_score == 'N/A':
-        #     overall_score = 'N/A'
-        # else:
-        #     overall_score = round(float(overall_score), 2)
-
-
 
         data_dict = {
             "code": Mapping.convert_value(row[0]),
@@ -222,16 +174,6 @@ class Mapping:
         row = Mapping.na_row(row)
         overall_score = await Mapping.get_overall_score(row, 3)
 
-        # row = ['N/A' if value == '-1' else value for value in row]
-        
-        # overall_score = row[3]
-        # if overall_score == 'N/A':
-        #     overall_score = 'N/A'
-        # else:
-        #     overall_score = round(float(overall_score), 2)
-
-
-
         data_dict = {
             "code": Mapping.convert_value(row[0]),
             "name": Mapping.convert_value(row[1]),
@@ -253,14 +195,6 @@ class Mapping:
 
         row = Mapping.na_row(row)
         overall_score = await Mapping.get_overall_score(row, 3)
-        # row = ['N/A' if value == '-1' else value for value in row]
-        
-        # overall_score = row[3]
-        # if overall_score == 'N/A':
-        #     overall_score = 'N/A'
-        # else:
-        #     overall_score = round(float(overall_score), 2)
-
 
 
         data_dict = {
